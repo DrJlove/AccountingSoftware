@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="Accounting_Software.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Objective Accounting</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        /* Navbar container */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial;
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+
+            /* Links inside the navbar */
+            .navbar a {
+                float: right;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .navbar img {
+                float: left;
+            }
+
+        /* The dropdown container */
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+
+            /* Dropdown button */
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit; /* Important for vertical align on mobile phones */
+                margin: 0; /* Important for vertical align on mobile phones */
+            }
+
+            /* Add a red background color to navbar links on hover */
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: red;
+            }
+
+        /* Dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                /* Add a grey background color to dropdown links on hover */
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /*Content from each page*/
+        .content {
+            padding: 2em;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a, .dropdown{
+                align-content: center;
+                float: none;
+            }
+            .navbar img{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <img height="47px" src="Assets/logo.JPG" />
+            <a href="#home">Journalize</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Reports
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Trial Balance</a>
+                    <a href="#">Income Statement</a>
+                    <a href="#">Balance Sheet</a>
+                    <a href="#">SORE</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Transactions
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Pending Transactions</a>
+                    <a href="#">Posted Transactions</a>
+                    <a href="#">Rejected Transactions</a>
+                    <a href="#">Suspended Transactions</a>
+                </div>
+            </div>
+            <a href="#home">View Ledger</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Financial Analysis
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Ratio Analysis</a>
+                    <a href="#">Dashboards</a>
+                </div>
+            </div>
+            <a href="#home">View Chart of Accounts</a>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
