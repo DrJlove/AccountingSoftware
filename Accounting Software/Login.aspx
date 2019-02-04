@@ -16,6 +16,10 @@
         <asp:Label ID="label_Password" runat="server" Text="Password:"></asp:Label>
         <asp:TextBox ID="textbox_Password" TextMode="Password" runat="server"></asp:TextBox>
            
+        <asp:Button ID="button_ResetPassword" runat="server" Text="Reset Password" OnClick="button_ResetPassword_Click" />
+           
+        <asp:TextBox ID="textbox_PasswordReset" TextMode="Password" runat="server"></asp:TextBox>
+           
         <asp:Button ID="button_Login" runat="server" Text="Login" OnClick="button_Login_Click" />
 
         </br>

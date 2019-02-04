@@ -49,6 +49,24 @@ namespace Accounting_Software {
         protected global::System.Web.UI.WebControls.TextBox textbox_Password;
         
         /// <summary>
+        /// button_ResetPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button button_ResetPassword;
+        
+        /// <summary>
+        /// textbox_PasswordReset control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textbox_PasswordReset;
+        
+        /// <summary>
         /// button_Login control.
         /// </summary>
         /// <remarks>

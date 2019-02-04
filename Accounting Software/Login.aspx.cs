@@ -87,5 +87,26 @@ namespace Accounting_Software
         {
             Response.Redirect("UserCreationPortal.aspx");
         }
+
+        protected void button_ResetPassword_Click(object sender, EventArgs e)
+        {
+            SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            try
+            {
+                if (textbox_Username.Text.Equals(null) || textbox_Username.Text.Equals(""))
+                    throw new Exception("Username is empty.");
+
+                sqlConnection.Open();
+                string getUser = "UPDATE UserTable SET Password=@Password WHERE Username=@Username;";
+                SqlCommand sqlCommand = new SqlCommand(getUser, sqlConnection);
+                sqlCommand.Parameters.AddWithValue("@Username", textbox_Username.Text);
+                sqlCommand.Parameters.AddWithValue("@Password", textbox_PasswordReset.Text);
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception exception)
+            {
+                Response.Write(exception);
+            }
+        }
     }
 }
