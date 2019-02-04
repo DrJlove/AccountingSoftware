@@ -19,14 +19,21 @@ namespace Accounting_Software
         protected void submit_Button_Click(object sender, EventArgs e)
         {
             SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            sqlConnection.Open();
-            string insert = "INSERT INTO UserTable ([User ID], FirstName, LastName, Role, Active, Username, Password) VALUES (@UserID, @FirstName, @LastName, @Role, @Active, @Username, @Password)";
-            SqlCommand sqlCommand = new SqlCommand(insert, sqlConnection);
 
-            Random randy = new Random();
-            int userID = randy.Next(1000, 10000);
             try
             {
+                if (fieldsEmpty())
+                {
+                    throw new Exception("Fields are empty");
+                }
+                sqlConnection.Open();
+
+                string insert = "INSERT INTO UserTable ([User ID], FirstName, LastName, Role, Active, Username, Password) VALUES (@UserID, @FirstName, @LastName, @Role, @Active, @Username, @Password)";
+                SqlCommand sqlCommand = new SqlCommand(insert, sqlConnection);
+
+                Random randy = new Random();
+                int userID = randy.Next(1000, 10000);
+
                 sqlCommand.Parameters.AddWithValue("@UserID", userID);
                 sqlCommand.Parameters.AddWithValue("@FirstName", input_FirstName.Text);
                 sqlCommand.Parameters.AddWithValue("@LastName", input_LastName.Text);
@@ -35,12 +42,29 @@ namespace Accounting_Software
                 sqlCommand.Parameters.AddWithValue("@Username", input_UserName.Text);
                 sqlCommand.Parameters.AddWithValue("@Password", input_Password.Text);
                 sqlCommand.ExecuteNonQuery();
-                sqlConnection.Close();
             }
-            catch (Exception exception) {
+            catch (Exception exception)
+            {
                 Response.Write(exception);
             }
+            finally {
+                sqlConnection.Close();
+            }
             button_Submit.Text = "howdy";
+        }
+
+        private Boolean fieldsEmpty()
+        {
+            if (input_FirstName.Text.Equals(null) || input_FirstName.Text.Equals(""))
+                return true;
+            if (input_LastName.Text.Equals(null) || input_LastName.Text.Equals(""))
+                return true;
+            if (input_UserName.Text.Equals(null) || input_UserName.Text.Equals(""))
+                return true;
+            if (input_Password.Text.Equals(null) || input_Password.Text.Equals(""))
+                return true;
+
+            return false;
         }
     }
 }

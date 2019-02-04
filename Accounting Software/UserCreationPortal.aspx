@@ -17,7 +17,6 @@
     <asp:TextBox ID="input_LastName" ToolTip="Input Last Name" runat="server"></asp:TextBox>
     <br />
     <asp:DropDownList runat="server" AutoPostBack="true" ID="dropdown_Role">
-<<<<<<< HEAD
         <asp:ListItem Text="Admin" Value="Admin"></asp:ListItem>
         <asp:ListItem Text="Manager" Value="Manager"></asp:ListItem>
         <asp:ListItem Text="Accountant" Value="Accountant"></asp:ListItem>
@@ -25,15 +24,6 @@
     <asp:DropDownList runat="server" AutoPostBack="true" ID="dropdown_Active">
         <asp:ListItem Text="Active" Value="Yes"></asp:ListItem>
         <asp:ListItem Text="Inactive" Value="No"></asp:ListItem>
-=======
-        <asp:ListItem Text="Admin" Value="1"></asp:ListItem>
-        <asp:ListItem Text="Manager" Value="2"></asp:ListItem>
-        <asp:ListItem Text="Accountant" Value="3"></asp:ListItem>
-    </asp:DropDownList>
-    <asp:DropDownList runat="server" AutoPostBack="true" ID="dropdown_Active">
-        <asp:ListItem Text="Active" Value="1"></asp:ListItem>
-        <asp:ListItem Text="Inactive" Value="2"></asp:ListItem>
->>>>>>> d4e918f28468629800391cc84c8e18e4ac68bac2
     </asp:DropDownList>
     <br />
     <asp:Label ID="label_UserName" runat="server" Text="User Name:"></asp:Label>
