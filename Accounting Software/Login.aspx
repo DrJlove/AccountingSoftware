@@ -10,8 +10,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-centered">
-        <input id="Text1" type="text" placeholder="Username" />
-        <input id="Text2" type="password" placeholder="Password" />
+           
+        <asp:Label ID="label_Username" runat="server" Text="Username:"></asp:Label>
+        <asp:TextBox ID="textbox_Username" runat="server"></asp:TextBox>
+        <asp:Label ID="label_Password" runat="server" Text="Password:"></asp:Label>
+        <asp:TextBox ID="textbox_Password" runat="server"></asp:TextBox>
+           
         <asp:Button ID="button_Login" runat="server" Text="Login" OnClick="button_Login_Click" />
 &nbsp;</div>
 </asp:Content>
