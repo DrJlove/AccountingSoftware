@@ -32,5 +32,5 @@
     <asp:Label ID="label_Password" runat="server" Text="Password:"></asp:Label>
     <asp:TextBox ID="input_Password" ToolTip="Input Password" runat="server"></asp:TextBox>
     <br />
-    <asp:Button ID="button_Submit" Text="hi" runat="server" OnClick="submit_Button_Click" />
+    <asp:Button ID="button_Submit" Text="Submit" runat="server" OnClick="submit_Button_Click" />
 </asp:Content>

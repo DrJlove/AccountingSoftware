@@ -48,6 +48,7 @@ namespace Accounting_Software
                 string role = Convert.ToString(ds.Tables[0].Rows[0]["Role"]);
 
                 sqlConnection.Close();
+
                 redirectOnRole(role);
             }
             catch (Exception exception)
@@ -71,12 +72,20 @@ namespace Accounting_Software
             switch (role)
             {
                 case "Admin":
-                    Response.Redirect("UserCreationPortal.aspx");
+                    button_CreateUser.Enabled = true;
+                    button_EditUser.Enabled = true;
                     break;
                 default:
+                    button_CreateUser.Enabled = false;
+                    button_EditUser.Enabled = false;
                     button_Login.Text = role;
                     break;
             }
+        }
+
+        protected void button_CreateUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserCreationPortal.aspx");
         }
     }
 }
