@@ -68,10 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\Database1.mdf" />
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="Assets\logo.JPG" />
+    <Content Include="UserCreationPortal.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
   </ItemGroup>
@@ -90,6 +88,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCreationPortal.aspx.cs">
+      <DependentUpon>UserCreationPortal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCreationPortal.aspx.designer.cs">
+      <DependentUpon>UserCreationPortal.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

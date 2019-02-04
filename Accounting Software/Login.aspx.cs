@@ -11,6 +11,11 @@ namespace Accounting_Software
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        protected void button_Login_Click(object sender, EventArgs e)
+        {
 
         }
     }

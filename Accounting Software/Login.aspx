@@ -12,6 +12,7 @@
     <div class="content-centered">
         <input id="Text1" type="text" placeholder="Username" />
         <input id="Text2" type="password" placeholder="Password" />
-    </div>
+        <asp:Button ID="button_Login" runat="server" Text="Login" OnClick="button_Login_Click" />
+&nbsp;</div>
 </asp:Content>
 
