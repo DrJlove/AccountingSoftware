@@ -50,7 +50,6 @@ namespace Accounting_Software
             finally {
                 sqlConnection.Close();
             }
-            button_Submit.Text = "howdy";
         }
 
         private Boolean fieldsEmpty()
