@@ -18,5 +18,10 @@ namespace Accounting_Software
         {
             Response.Redirect("UserCreationPortal.aspx");
         }
+
+        protected void button_EditUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminControlPage.aspx");
+        }
     }
 }
