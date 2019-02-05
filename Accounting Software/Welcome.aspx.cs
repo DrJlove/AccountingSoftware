@@ -11,11 +11,7 @@ namespace Accounting_Software
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["UserRole"] == "Admin")
-            {
-                button_CreateUser.Visible = true;
-                button_EditUser.Visible = true;
-            }
+
         }
 
         protected void button_CreateUser_Click(object sender, EventArgs e)
