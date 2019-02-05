@@ -69,24 +69,11 @@ namespace Accounting_Software
 
         private void redirectOnRole(string role)
         {
-            switch (role)
-            {
-                case "Admin":
-                    button_CreateUser.Enabled = true;
-                    button_EditUser.Enabled = true;
-                    break;
-                default:
-                    button_CreateUser.Enabled = false;
-                    button_EditUser.Enabled = false;
-                    button_Login.Text = role;
-                    break;
-            }
+            Session["UserRole"] = role;
+            Response.Redirect("Welcome.aspx");
         }
 
-        protected void button_CreateUser_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("UserCreationPortal.aspx");
-        }
+
 
         protected void button_ResetPassword_Click(object sender, EventArgs e)
         {
