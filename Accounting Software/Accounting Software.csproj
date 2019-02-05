@@ -72,7 +72,10 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="Assets\graph.png" />
+    <Content Include="Assets\icon.png" />
     <Content Include="Assets\logo.JPG" />
+    <Content Include="Assets\logo.png" />
     <Content Include="UserCreationPortal.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
