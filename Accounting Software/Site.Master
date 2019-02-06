@@ -97,13 +97,21 @@
                 display: none;
             }
         }
+        .auto-style1 {
+            padding: 2em;
+            text-align: right;
+        }
+        .auto-style2 {
+            text-align: right;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
+        <div class="auto-style2">
         <div class="navbar">
-            <img height="47px" src="Assets/logo.png" />
-           <!-- <img height="47px" src="Assets/icon.png" /> -->
+            <img height="47px" src="Assets/logo.JPG" />
+            <img height="47px" src="Assets/icon.png" />
             <div class="dropdown" id="Userinfo">
                 <button class="dropbtn">
                     User Info
@@ -111,7 +119,7 @@
                 <div class="dropdown-content">
                     <a href="#">User Name</a>
                     <a href="#">View Profile</a>
-                    <a href="#">Logout</a>
+                    <a href="#" id="logout" onclick="logoutbutton">Logout</a>
                 </div>
             </div>
             <a href="#home">Journalize</a>
@@ -149,9 +157,11 @@
             </div>
             <a href="#home">View Chart of Accounts</a>
         </div>
-        <div class="content">
+        <asp:Button ID="button_Logout" runat="server" Text="Logout" OnClick="buttonLogout_Click" />
+        <div class="auto-style1">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            </asp:ContentPlaceHolder>            
+        </div>
         </div>
     </form>
 </body>

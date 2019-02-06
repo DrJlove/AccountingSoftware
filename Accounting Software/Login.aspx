@@ -22,6 +22,11 @@
            
         <asp:Button ID="button_Login" runat="server" Text="Login" OnClick="button_Login_Click" />
 
+        <br />
+        <br />
+        <br />
+        <asp:Label ID="labelLoginError" runat="server" ForeColor="Red"></asp:Label>
+
     </div>
 </asp:Content>
 

@@ -16,6 +16,9 @@ namespace Accounting_Software
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            AddUserButton.Visible = false;
+            UpdateUserButton.Enabled = false;
+
             ChangesLabel.Visible = false;
             if (UserDropDownList.Items.Count == 0)
             {
@@ -62,10 +65,12 @@ namespace Accounting_Software
                 }
                 UsernameTextbox.Text = myReader2.GetString(5).ToString(); //Gets Username
                 PasswordTextbox.Text = myReader2.GetString(6).ToString(); //Gets User Password
+                EmailTextbox.Text = myReader2.GetString(8).ToString(); //Gets Email
 
             }
             sqlCon.Close();
             UserIDTextbox.Enabled = false;
+            UpdateUserButton.Enabled = true;
         }
 
         protected void ClearFieldsButton_Click(object sender, EventArgs e)
@@ -82,30 +87,31 @@ namespace Accounting_Software
             ActiveCheckBox.Checked = false;
             UsernameTextbox.Text = "";
             PasswordTextbox.Text = "";
-            UserDropDownList.Text = "Accountant";
+            EmailTextbox.Text = "";
+            RoleDropDown.Text = "Accountant";
             UserIDTextbox.Enabled = true;
         }
 
         protected void AddUserButton_Click(object sender, EventArgs e)
         {
-            bool val;
-            if (ActiveCheckBox.Checked)
-            {
-                val = true;
-            }
-            else
-            {
-                val = false;
-            }
-            string ins = "INSERT INTO [UserTable](User_ID, FirstName, LastName, Role, Active, Username, Password) values('" + UserIDTextbox.Text + "', '" + FirstnameTextbox.Text + "', '" + LastnameTextbox.Text + "', '" + RoleDropDown.Text + "', '" + val + "', '" + UsernameTextbox.Text + "', '" + PasswordTextbox.Text + "')";
-            SqlCommand connect = new SqlCommand(ins, sqlCon);
-            sqlCon.Open();
-            connect.ExecuteNonQuery();
-            sqlCon.Close();
+        //    bool val;
+        //    if (ActiveCheckBox.Checked)
+        //    {
+        //        val = true;
+        //    }
+        //    else
+        //    {
+        //        val = false;
+        //    }
+        //    string ins = "INSERT INTO [UserTable](User_ID, FirstName, LastName, Role, Active, Username, Password) values('" + UserIDTextbox.Text + "', '" + FirstnameTextbox.Text + "', '" + LastnameTextbox.Text + "', '" + RoleDropDown.Text + "', '" + val + "', '" + UsernameTextbox.Text + "', '" + PasswordTextbox.Text + "')";
+        //    SqlCommand connect = new SqlCommand(ins, sqlCon);
+        //    sqlCon.Open();
+        //    connect.ExecuteNonQuery();
+        //    sqlCon.Close();
 
-            ClearFields();
+        //    ClearFields();
 
-            ChangesLabel.Visible = true;
+        //    ChangesLabel.Visible = true;
         }
 
         protected void UpdateUserButton_Click(object sender, EventArgs e)
@@ -123,7 +129,7 @@ namespace Accounting_Software
                     val2 = false;
                 }
 
-                string Upd = "UPDATE UserTable SET FirstName=@firstname, LastName=@lastname, Role=@role, Active=@active, Username=@username, Password=@password WHERE User_ID='" + UserIDTextbox.Text + "';";
+                string Upd = "UPDATE UserTable SET FirstName=@firstname, LastName=@lastname, Role=@role, Active=@active, Username=@username, Password=@password, Email=@email WHERE User_ID='" + UserIDTextbox.Text + "';";
                 sqlCon.Open();
                 SqlCommand sqlUpdate = new SqlCommand(Upd, sqlCon);
                 sqlUpdate.Parameters.AddWithValue("@firstname", FirstnameTextbox.Text.Trim());
@@ -132,6 +138,7 @@ namespace Accounting_Software
                 sqlUpdate.Parameters.AddWithValue("@active", val2);
                 sqlUpdate.Parameters.AddWithValue("@username", UsernameTextbox.Text.Trim());
                 sqlUpdate.Parameters.AddWithValue("@password", PasswordTextbox.Text.Trim());
+                sqlUpdate.Parameters.AddWithValue("@email", EmailTextbox.Text.Trim());
 
                 sqlUpdate.ExecuteNonQuery();
 
@@ -141,6 +148,11 @@ namespace Accounting_Software
 
 
             }
+        }
+
+        protected void button_ReturnFromModify_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Welcome.aspx");
         }
     }
 

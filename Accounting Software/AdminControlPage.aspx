@@ -69,8 +69,9 @@
         <br />
     </p>
     <p class="auto-style12">
-        Admin Page</p>
+        Modify a User Below</p>
     <p>
+        <asp:Button ID="button_ReturnFromModify" runat="server" OnClick="button_ReturnFromModify_Click" Text="Return" />
     </p>
     <table style="width: 100%;">
         <tr>
@@ -95,7 +96,7 @@
         </tr>
         <tr>
             <td class="auto-style19">&nbsp;</td>
-            <td class="auto-style13">Add or Modify User:</td>
+            <td class="auto-style13">&nbsp;</td>
             <td class="auto-style12">&nbsp;</td>
         </tr>
         <tr>
@@ -131,7 +132,16 @@
             <td class="auto-style9">
                 <asp:TextBox ID="PasswordTextbox" runat="server"></asp:TextBox>
             </td>
-            <td class="auto-style10"></td>
+            <td class="auto-style10">
+                <asp:Label ID="label_FormatPassword" runat="server" ForeColor="Red"></asp:Label>
+                </td>
+        </tr>
+        <tr>
+            <td class="auto-style8">Email:</td>
+            <td class="auto-style9">
+                <asp:TextBox ID="EmailTextbox" runat="server"></asp:TextBox>
+            </td>
+            <td class="auto-style10">&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style8">Role:</td>

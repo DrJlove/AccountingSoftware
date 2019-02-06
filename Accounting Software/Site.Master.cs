@@ -11,7 +11,21 @@ namespace Accounting_Software
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] == null || Session["Username"].ToString() == "")
+            {
+                button_Logout.Visible = false;
+            }
+            else
+            {
+                button_Logout.Visible = true;                
+            }
+        }
 
+        protected void buttonLogout_Click(object sender, EventArgs e)
+        {
+            Session["Username"] = null;
+            Response.Redirect("Welcome.aspx");
+            button_Logout.Visible = false;
         }
     }
 }

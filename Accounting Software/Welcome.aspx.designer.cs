@@ -13,6 +13,24 @@ namespace Accounting_Software {
     public partial class Welcome {
         
         /// <summary>
+        /// label_Welcome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_Welcome;
+        
+        /// <summary>
+        /// LoginPageButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LoginPageButton;
+        
+        /// <summary>
         /// button_CreateUser control.
         /// </summary>
         /// <remarks>

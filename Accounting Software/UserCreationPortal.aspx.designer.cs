@@ -13,6 +13,15 @@ namespace Accounting_Software {
     public partial class UserCreationPortal {
         
         /// <summary>
+        /// button_Return control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button button_Return;
+        
+        /// <summary>
         /// label_FirstName control.
         /// </summary>
         /// <remarks>
@@ -49,6 +58,15 @@ namespace Accounting_Software {
         protected global::System.Web.UI.WebControls.TextBox input_LastName;
         
         /// <summary>
+        /// label_SpecifyRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_SpecifyRole;
+        
+        /// <summary>
         /// dropdown_Role control.
         /// </summary>
         /// <remarks>
@@ -58,13 +76,22 @@ namespace Accounting_Software {
         protected global::System.Web.UI.WebControls.DropDownList dropdown_Role;
         
         /// <summary>
-        /// dropdown_Active control.
+        /// label_Active control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList dropdown_Active;
+        protected global::System.Web.UI.WebControls.Label label_Active;
+        
+        /// <summary>
+        /// Checkbox_Active control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox Checkbox_Active;
         
         /// <summary>
         /// label_UserName control.
@@ -103,6 +130,51 @@ namespace Accounting_Software {
         protected global::System.Web.UI.WebControls.TextBox input_Password;
         
         /// <summary>
+        /// label_FormatPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_FormatPassword;
+        
+        /// <summary>
+        /// label_Email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_Email;
+        
+        /// <summary>
+        /// input_Email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox input_Email;
+        
+        /// <summary>
+        /// label_FormatEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_FormatEmail;
+        
+        /// <summary>
+        /// button_ClearNewUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button button_ClearNewUser;
+        
+        /// <summary>
         /// button_Submit control.
         /// </summary>
         /// <remarks>
@@ -110,5 +182,14 @@ namespace Accounting_Software {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button button_Submit;
+        
+        /// <summary>
+        /// label_UserAdded control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_UserAdded;
     }
 }

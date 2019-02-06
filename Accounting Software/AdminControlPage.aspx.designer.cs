@@ -13,6 +13,15 @@ namespace Accounting_Software {
     public partial class AdminControlPage {
         
         /// <summary>
+        /// button_ReturnFromModify control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button button_ReturnFromModify;
+        
+        /// <summary>
         /// UserDropDownList control.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,24 @@ namespace Accounting_Software {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PasswordTextbox;
+        
+        /// <summary>
+        /// label_FormatPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label label_FormatPassword;
+        
+        /// <summary>
+        /// EmailTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox EmailTextbox;
         
         /// <summary>
         /// RoleDropDown control.
